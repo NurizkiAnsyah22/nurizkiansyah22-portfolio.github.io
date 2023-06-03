@@ -147,6 +147,40 @@
           </div>
         </div>
       </div>
+
+      <section id="my-keyboards">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>My-keyboards</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Log-on</h4>
+                <img src="img/tiltjs/keyboard1.png" alt="my-keyboards" class="keyboard-img" />
+                <a href="#" class="btn btn-light keyboad-detail-button">Show Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Log-on</h4>
+                <img src="img/tiltjs/keyboard2.png" alt="my-keyboards" class="keyboard-img" />
+                <a href="#" class="btn btn-light keyboad-detail-button">Show Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="keyboard-box">
+                <h4 class="keyboard-name">Log-on</h4>
+                <img src="img/tiltjs/keyboard3.png" alt="my-keyboards" class="keyboard-img" />
+                <a href="#" class="btn btn-light keyboad-detail-button">Show Detail</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -157,8 +191,6 @@
     </section>
 
     <!-- aakhir projects -->
-
-    
 
     <!-- gallery -->
 
@@ -301,7 +333,7 @@
 
     <script>
       gsap.registerPlugin(TextPlugin);
-      gsap.to('.lead', {duration: 2, delay: 1.5, text: 'Web Developers | Software Engineer'});
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Web Developers | Software Engineer" });
       gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
       gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
       gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
@@ -333,6 +365,16 @@
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
+
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
+        max: 30,
+        speed: 600,
+        glare: true,
       });
     </script>
   </body>
